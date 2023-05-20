@@ -4,7 +4,7 @@ resource "aws_default_vpc" "default_vpc" {
 }
   # Create Web Security Group
 resource "aws_security_group" "web-sg" {
-    name        = "Web-SG"
+    name        = "dynamicinv-SG"
     description = "Allow ssh inbound traffic"
     vpc_id      = aws_default_vpc.default_vpc.id
   
