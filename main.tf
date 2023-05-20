@@ -87,7 +87,6 @@ module "ec2_instance" {
   monitoring             = true
   user_data            = "${each.value.user_data}"
   vpc_security_group_ids = ["${aws_security_group.web-sg.id}"]
-  subnet_id              = aws_subnet.web-subnet.id
 
   tags = {
     Terraform   = "true"
